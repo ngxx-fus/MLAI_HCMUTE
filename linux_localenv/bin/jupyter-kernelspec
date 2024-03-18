@@ -1,0 +1,10 @@
+#!/mnt/sda1/DOC/23-24_HK02/MLAI/PYTHON/linux_localenv/bin/python
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from jupyter_client.kernelspecapp import KernelSpecApp
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(KernelSpecApp.launch_instance())
